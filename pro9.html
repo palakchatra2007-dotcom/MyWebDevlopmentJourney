@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container{
+            width: 100%;
+            height: 1300px;
+            /* display: inline-block; */
+            /* background-color: lightpink; */
+        }
+        .cont-box{
+            width: 1000px;
+            height: 1300px;
+            border: 15px solid white;
+            margin: 130px auto 0 auto;
+            
+        }
+        body{
+            background-color: lightpink;
+        }
+        .box-1{
+            width: auto;
+            height: 40px;
+            border-bottom: 15px solid white;
+            text-align: center;
+            font-size: 20px;
+            line-height: 2;
+            color: white;
+            font-style: calc();
+            letter-spacing: 4px;
+            
+        }
+        .box-2{
+            width: auto;
+            height: 200px;
+            border-bottom: 15px solid white;
+            background-color:rgb(225, 163, 174);
+        }
+        .box-2-ins{
+            width: 600px;
+            height: 80px;
+            background-color: lightpink;
+            color: white;
+            text-align: center;
+            font-size:37px;
+            font-weight: bolder;
+            letter-spacing: 6px;
+            border: 3px solid white;
+            margin: 0px auto 0px;
+            line-height: 2.2;
+        }
+        .box-3{
+            width: auto;
+            height: 55px;
+            border-bottom: 15px solid white;
+            text-align: center;
+            font-size: 20px;
+            line-height: 2;
+            color: white; 
+            font-style: calc(); 
+            word-spacing: 5em;
+            letter-spacing: 3px;
+            
+        }
+        .box-4{
+            width: 680px;
+            height: 780px;
+            border-bottom: 15px solid white;
+            border-right: 15px solid white;
+            float: left;
+            
+        }
+        .box-4 h1{
+            margin: 20px auto 0px 40px;
+            color: white;
+            letter-spacing: 5px;
+            font-size: 20px;
+        }
+        .box-4 h2{
+            margin: 10px auto 0px 40px;
+            color: white;
+            letter-spacing: 5px;
+            font-size: 37px;
+        }
+        .box-4 p{
+            margin: 10px auto 0px 40px;
+            color: white;
+            letter-spacing: 5px;
+            font-size: 20px;
+        }
+        .box-4-cont1{
+            width: 600px;
+            height: 400px;
+            background-color: rgb(255, 255, 255,0.5);
+            margin: 10px auto 0px 40px;
+        }
+        .box-4-cont2{
+            width: 600px;
+            height: 10px;
+            background-color: white;
+            margin: 25px auto 0px 40px;
+        }
+        .box-4-cont3{
+            width: 600px;
+            height: 10px;
+            background-color: white;
+            margin: 25px auto 0px 40px;
+        }
+        .box-4-cont4{
+            width: 600px;
+            height: 10px;
+            background-color:white;
+            margin: 25px auto 0px 40px;
+        }
+        .box-4-cont5{
+            width: 600px;
+            height: 10px;
+            background-color:white;
+            margin: 25px auto 0px 40px;
+        }
+        .box-4 h4{
+            color: white;
+            margin: 30px 0px 0px 40px;
+            float: left;
+        }
+        .box-4 h3{
+            color: white;
+            margin: 30px 40px 0px auto;
+            word-spacing: 1em;
+            float: right;
+        }
+        .clear-all{
+            clear: both;
+        }
+        .box-5{
+            width: 305.5px;
+            height: 120px;
+            border-bottom: 5px solid white;
+            /* text-align: center;
+            font-style: calc(); */
+            float: right;
+            
+        }
+        .box-5 h1{
+            font-size:20px;
+            color: white;
+            margin: 20px auto 0px 10px;
+        }
+        .box-5 h2{
+            font-size:30px;
+            color: white;
+            margin: 0px auto 10px 10px;
+            word-spacing: 1em;
+        }
+
+        .box-6{
+            width: 305.5px;
+            height: 190px;
+            border-bottom: 5px solid white;
+            float: right;
+            /* text-align: center;
+            font-size: 20px;
+            line-height: 2;
+            color: white;
+            font-style: calc(); */
+            
+        }
+        .box-6-ins{
+            width: auto;
+            height: 135px;
+            margin: 25px 35px 20px 20px;
+            background-color: rgb(255, 255, 255, 0.5);
+        }
+        .box-7{
+            width: 305.5px;
+            height: 460px;
+            border-bottom: 15px solid white;
+            float: right;
+            /* text-align: center;
+            font-size: 20px;
+            line-height: 2;
+            color: white;
+            font-style: calc(); */
+            
+        }
+        .box-7 h1{
+            color: white;
+            font-size: 20px;
+            margin: 25px auto 10px 10px;
+
+        }
+        .box-7-con1{
+            width: auto;
+            height: 105px;
+            margin: 25px 35px 20px 20px;
+            background-color: rgb(255, 255, 255, 0.5);
+        }
+        .box-7-con2{
+            width: auto;
+            height: 105px;
+            margin: 25px 35px 20px 20px;
+            background-color: rgb(255, 255, 255, 0.5);
+        }
+        .box-7-con3{
+            width: auto;
+            height: 105px;
+            margin: 25px 35px 20px 20px;
+            background-color: rgb(255, 255, 255, 0.5);
+        }
+        .clear-all{
+            clear: both;
+        }
+        .box-8{
+            width: auto;
+            height: 167.5px;
+            /* border-bottom: 15px solid white; */
+            text-align: center;
+            font-size: 17px;
+            line-height: 2.7;
+            color: white;
+            font-style: calc();
+            letter-spacing: 4px;
+            background-color:rgb(225, 163, 174);
+            
+        }
+        .blog-box{
+            width: 500px;
+            height: 100px;
+            margin: 0px auto 0px;
+            background-color: rgb(255, 255, 255,0.9);
+            position: absolute;
+            left: 34.3%;
+            top: 1410px;
+            text-align: center;
+            font-size: 25px;
+            line-height: 3.5;
+            color: black;
+            /* font-style: calc(); */
+            letter-spacing: 5px;
+            font-weight: bolder;
+
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            border-radius: 360px;
+            background-color: #FFD700;
+            position: absolute;
+            left: 48%;
+            top: 1480px;
+            text-align: center;
+            font-size: 30px;
+            line-height: 3;
+            color: white;
+            letter-spacing: 8px;
+            font-weight: bolder;
+            font-style: unset;
+
+        }
+        .footer{
+            width: auto;
+            height: 200px;
+            background-color: darkcyan;
+            margin-top: 80px;
+        }
+        .footer h1{
+            text-align: center;
+            font-size: 60px;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .footer p{
+            font-size: 15px;
+            /* line-height: 0; */
+            text-align: center;
+            color: white;
+            margin-top: 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cont-box">
+            <div class="box-1">INFORMATION MENU BAR</div>
+            <div class="box-2"><br><br><br>
+                <div class="box-2-ins">BLOG NAME</div>
+            </div>
+            <div class="box-3">CATEGORY1  CATEGORY2 CATEGORY3</div>
+            <div class="box-4">
+                <h1>CATEGORY</h1>
+                <h2>POST TITLE</h2>
+                <p>DATE</p>
+                <div class="box-4-cont1"></div>
+                <div class="box-4-cont2"></div>
+                <div class="box-4-cont3"></div>
+                <div class="box-4-cont4"></div>
+                <div class="box-4-cont5"></div>
+                <h4>COMMENTS</h4>
+                <h3>SHARE 
+                    <i class="fa-brands fa-facebook-f" style="font-size: 23px;" ></i>
+                    <i class="fa-brands fa-twitter" style="font-size: 23px;"></i>
+                    <i class="fa-brands fa-pinterest-p" style="font-size: 23px;"></i>
+                </h3>
+                <br class="clear-all">
+            </div>
+            <div class="box-5">
+                <h1 >FOLLOW US </h1><br>
+                <h2>
+                <i class="fa-brands fa-facebook-f" style="font-size: 27px; " ></i>
+                <i class="fa-brands fa-twitter" style="font-size: 27px;"></i>
+                <i class="fa-brands fa-pinterest-p" style="font-size: 27px;"></i>
+                <i class="fa-sharp fa-solid fa-camera" style="font-size: 27px;"></i>
+                </h2>
+            </div>
+            <div class="box-6">
+                <div class="box-6-ins"></div>
+            </div>
+            <div class="box-7">
+                <h1>POPULAR POST</h1>
+                <div class="box-7-con1"></div>
+                <div class="box-7-con2"></div>
+                <div class="box-7-con3"></div>
+
+            </div>
+            <br class="clear-all">
+            <div class="box-8">CREDIT & COPYRIGHT</div>
+        </div>
+        <div class="blog-box">BL0G DESIGN 101</div>
+        <div class="circle">01</div>
+        <div class="footer"> 
+            <h1><br>ANATOMY OF A BLOG LAYOUT </h1>
+            <p>Futuredesign.com</p>
+             </div>
+    </div> 
+</body>
+</html>
