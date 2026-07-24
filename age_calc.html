@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background: rgb(244, 205, 224);
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .cont1{
+            width: 100%;
+            height: 200px;
+            background-color: rgb(182, 221, 234);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .live-date{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 20px;
+            color: rgb(29, 29, 107);
+            font-weight: 600;
+
+        }
+        .age{
+            width: 900px;
+            height: 150px;
+            background-color: deepskyblue;
+            color: white;
+            border-radius: 20px 20px 0px 0px;
+            position: absolute;
+            left: 330px;
+            top: 49px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 45px;
+            font-weight: 400;
+            text-align: center;
+            padding-top: 18px;
+        }
+        .cont2{
+            width: 830px;
+            height: 270px;
+            background-color: whitesmoke;
+            color: rgb(29, 29, 107);
+            border-radius: 20px;
+            position: absolute;
+            left: 365px;
+            top: 120px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+            box-shadow: 0px 0px 7px grey;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .cont3{
+            width: 650px;
+            height: 250px;
+            background-color: whitesmoke;
+            border-radius: 17px;
+            position: absolute;
+            left: 370px;
+            bottom: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+            font-weight: 400;
+            text-align: center;
+            display: none;
+            overflow: hidden;
+            box-shadow: 0px 0px 6px grey;
+        }
+        .cont4{
+            width: 300px;
+            height: 250px;
+            background-color: rgba(173, 216, 230,0.5);
+            border-radius: 13px;
+            padding: 10px;
+            position: absolute;
+            right: 160px;
+            bottom: 40px;
+            display: none;
+        }
+        .left-metrics{
+            width: 100%;
+            height: 100%;
+            padding: 25px;
+            text-align: center;
+        }
+        .result-title{
+            font-size: 30px;
+            color: rgb(29, 29, 107);
+            margin-bottom: 25px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .result-grid{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .result-item span{
+            display: block;
+            font-size: 90px;
+            color: rgb(29, 29, 107);
+            line-height: 1;
+            font-weight: bold;
+        }
+        .result-item label{
+            display: block;
+            font-size: 30px;
+            color: rgb(29, 29, 107);
+            margin-top: 8px;
+            font-weight: 200;
+        }
+        .right-details{
+            padding: 20px;
+        }
+
+        .right-details h3{
+            font-size: 30px;
+            /* color: rgb(29, 29, 107); */
+            margin-bottom: 10px;
+        }
+
+        .detail-line{
+            font-size: 25px;
+            margin-bottom: 10px;
+            color: rgb(29, 29, 107);
+        }
+
+        .calc{
+            display: flex;
+            font-weight: lighter;
+            align-items: flex-end;
+            padding-top: 30px;
+            margin-top: 15px;
+        }
+        input,select{
+            width: 220px;
+            height: 50px;
+            border-radius: 13px;
+            border: 1px solid grey;
+            margin-top: 15px;
+            font-size: 20px;
+            padding-left: 5px;
+        }
+        .c1,.c2,.c3{
+            padding-right: 20px;
+            
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 23px;
+            border: none;
+            transition: background 0.2s;
+            color: whitesmoke;
+            background-color: rgb(96, 171, 247);
+            margin-left: 32%;
+            margin-top: 20px;
+        }
+        button:hover{
+            background-color: #00b0ff;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cont1">
+            <div class="live-date" id="today-date"></div>
+            <div class="age">
+                Age Calculator
+            </div>
+        </div>
+        <div class="cont2">
+            <h1>Date of Birth</h1>
+            <div class="calc">
+                <div class="c1">
+                    <h2>Date</h2>
+                    <input type="number" id="day" placeholder="DD" min="1" max="31">
+                </div>
+                <div class="c2">
+                    <h2>Month</h2>
+                    <select id="month">
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+
+                    </select>
+                </div>
+                <div class="c3">
+                    <h2>Year</h2>
+                    <input type="number" id="year" placeholder="YYYY">
+                </div>
+                
+                
+            </div>
+            <button onclick="calculateAge()">Calculate Age</button>
+        </div>
+        <div class="cont3" id="result-box1"></div>
+        <div class="cont4" id="result-box2"></div>
+
+    </div>
+
+    <!-- <input type="date" id="dt"> -->
+
+
+    <script>
+        // var dt = document.getElementById("dt");
+        // dt.addEventListener("change",() =>{
+        //     console.log(dt.value);
+        // })
+        
+        // var d = new Date();
+        // console.log(d.getFullYear());
+
+        window.onload = function(){
+            const today = new Date();
+            const options = {
+                year:'numeric',
+                month:'long',
+                day:'numeric',
+            }
+
+            document.getElementById("today-date").innerText = today.toLocaleDateString('en-US',options);
+            document.getElementById("year").max = today.getFullYear();
+        }
+
+        function calculateAge(){
+            const birthDay = parseInt(document.getElementById("day").value);
+            const birthMonth = parseInt(document.getElementById("month").value);
+            const birthYear = parseInt(document.getElementById("year").value);
+            const resultBox1= document.getElementById("result-box1");
+            const resultBox2= document.getElementById("result-box2");
+
+
+            if(!birthDay || isNaN(birthMonth) || !birthYear){
+                alert("please fill all the blocks");
+                return;
+            }
+
+            const today = new Date();
+            const birthDate = new Date(birthYear,birthMonth,birthDay);
+
+            if(birthDate > today){
+                alert("Birth day cannot be in the future");
+                return;
+            }
+
+            const currentDay = today.getDate();
+            const currentMonth = today.getMonth();
+            const currentYear = today.getFullYear();
+            
+            let calcYears = currentYear - birthYear;
+            let calcMonth = currentMonth - birthMonth;
+            let calcDays = currentDay - birthDay;
+
+            if(calcDays < 0){
+                calcMonth--;
+                const daysInPrevMon = new Date(currentYear, currentMonth, 0).getDate();
+                calcDays += daysInPrevMon;
+            }
+
+            if(calcMonth < 0){
+                calcYears--;
+                calcMonth += 12;
+            }
+
+            const totalMilliSeconds = today.getTime() - birthDate.getTime();
+
+            const totalDays = Math.floor(totalMilliSeconds / (1000*60*60*24));
+            const totalWeeks = Math.floor(totalDays / 7);
+            const totalHours = Math.floor(totalMilliSeconds / (1000*60*60));
+            const totalMonths = Math.floor(calcYears*12 + calcMonth);
+
+            resultBox1.innerHTML = `
+                <div class="left-metrics">
+                    <div class ="result-title">You are Currently</div>
+                    <div class ="result-grid">
+                        <div class="result-item"><span>${calcYears}<span><label>Years</label></div>
+                        <div class="result-item"><span>${calcMonth}<span><label>Months</label></div>
+                        <div class="result-item"><span>${calcDays}<span><label>Days</label></div>
+                    </div>
+                </div>`;
+            resultBox2.innerHTML=`
+                <div class="right-details">
+                    <h3>Age in Details</h3>
+                    <div class="detail-line"><strong>${totalDays.toLocaleString()}</strong> Days Old </div>
+                    <div class="detail-line"><strong>${totalMonths.toLocaleString()}</strong> Months</div>
+                    <div class="detail-line"><strong>${totalWeeks.toLocaleString()}</strong> Weeks</div>
+                    <div class="detail-line"><strong>${totalHours.toLocaleString()}</strong> Hours</div>
+                </div>`;
+
+            resultBox1.style.display = "flex";
+            resultBox2.style.display = "flex";
+        }
+
+    </script>
+</body>
+</html>
